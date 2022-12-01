@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.container{
+    max-width: 1230px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+p,ul,li,h1,h2,h3,a{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --primaryColor: #FF9F1C;
+    --secondaryColor: #4D3616;
+    --primaryBg: #000814;
+    --textColor: #FFFFFF;
+    --secondaryText: #E8E8E8;
+}
