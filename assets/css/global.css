@@ -26,3 +26,7 @@ p,ul,li,h1,h2,h3,a{
     --textColor: #FFFFFF;
     --secondaryText: #E8E8E8;
 }
+
+.section_padding{
+    padding: 50px 0px;
+}

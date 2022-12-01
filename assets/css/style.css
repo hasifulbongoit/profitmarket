@@ -1,0 +1,124 @@
+.header_section {
+  padding: 13px 0px;
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 9;
+}
+
+.header_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_logo{
+  max-width: 80px;
+  width: 100%;
+  display: flex;
+}
+
+.header_logo img{
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.header_nav{
+  display: block;
+}
+
+.header_nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 50px;
+}
+
+.header_nav ul li{
+  display: inline-block;
+}
+
+.header_nav ul li a{
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--secondaryText);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
+.banner_section {
+  background-color: rgb(0 0 0 / 70%);
+  
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+
+.banner_section::after {
+  content: "";
+  position: absolute;
+  background: url(../image/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.banner_content{}
+
+.banner_heading {
+  text-align: center;
+  font-size: 52px;
+  color: var(--textColor);
+  
+  font-weight: 800;
+  line-height: 72px;
+}
+
+.banner_heading span{
+  color: var(--primaryColor);
+}
+
+.banner_text {
+  text-align: center;
+  color: var(--secondaryText);
+  margin-top: 20px;
+  font-size: 19px;
+  line-height: 26px;
+}
+
+.banner_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.butoon_inner a {
+  display: inline-flex;
+  font-size: 19px;
+  line-height: 26px;
+  padding: 13px 43px;
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+  color: var(--primaryBg);
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+.butoon_inner:nth-child(2) a{
+  color: var(--textColor);
+  background-color: var(--secondaryColor);
+  border: 2px solid var(--primaryColor);
+}
