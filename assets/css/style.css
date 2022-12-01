@@ -1,0 +1,32 @@
+
+.box-container{
+    display: flex; 
+    justify-content: space-between;
+}
+.box{
+    background-color: var(--primaryColor); 
+    border: 1px solid red;
+    width: 340px; 
+    height: 340px;
+}
+.box h3{
+    text-align: center;
+    color: var(--textColor);
+}
+
+.box p{
+    color: var(--secondaryColor);
+    text-align: center;
+}
+.title{
+    text-align: center;
+    margin: 1rem 0;
+}
+.dimond-img{
+    margin: 1rem 7rem;
+   border: 1px solid red;
+}
+.desc{
+    text-align: center;
+    margin: 1rem 0;
+}
