@@ -1,32 +1,341 @@
+.header_section {
+    padding: 13px 0px;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9;
+}
 
-.box-container{
-    display: flex; 
+.header_wrapper {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
-.box{
-    background-color: var(--primaryColor); 
-    border: 1px solid red;
-    width: 340px; 
-    height: 340px;
+
+.header_logo {
+    max-width: 80px;
+    width: 100%;
+    display: flex;
 }
-.box h3{
+
+.header_logo img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.header_nav {
+    display: block;
+}
+
+.header_nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+}
+
+.header_nav ul li {
+    display: inline-block;
+}
+
+.header_nav ul li a {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--secondaryText);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+.banner_section {
+    background-color: rgb(0 0 0 / 70%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+
+.banner_section::after {
+    content: "";
+    position: absolute;
+    background: url(../image/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+
+.banner_heading {
     text-align: center;
+    font-size: 52px;
+    color: var(--textColor);
+    font-weight: 800;
+    line-height: 72px;
+}
+
+.banner_heading span {
+    color: var(--primaryColor);
+}
+
+.banner_text {
+    text-align: center;
+    color: var(--secondaryText);
+    margin-top: 20px;
+    font-size: 19px;
+    line-height: 26px;
+}
+
+.banner_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.butoon_inner a {
+    display: inline-flex;
+    font-size: 19px;
+    line-height: 26px;
+    padding: 13px 43px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    color: var(--primaryBg);
+    font-weight: 600;
+    border: 2px solid transparent;
+}
+
+.butoon_inner:nth-child(2) a {
+    color: var(--textColor);
+    background-color: var(--secondaryColor);
+    border: 2px solid var(--primaryColor);
+}
+
+/* main */
+.box_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+    padding-bottom: 2.5rem;
+    margin-top: 3rem;
+}
+
+.plan {
+    background-color: var(--primaryBg);
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-info p {
+    color: #E8E8E8;
+    opacity: 80%;
+}
+
+.plan::after {
+    content: " ";
+    position: absolute;
+    background: url(../image/banner2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+
+.box {
+    background-color: rgb(77 54 22 / 80%);
+    border-radius: 14px;
+    padding: 1.5rem 0;
+    position: relative;
+    border: 2px solid transparent;
+    transition: all .3s linear;
+}
+
+.box:hover {
+    border: 2px solid var(--primaryColor);
+    transform: translateY(-10px);
+    /* transition: all .3s linear; */
+}
+
+.badge {
+    position: absolute;
+    width: 6rem;
+    height: 1.9rem;
+    /* visibility: hidden; */
+    background-color: var(--primaryColor);
+    border-radius: 10px 0px 20px 0px;
+    transition: all .3s linear;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    color: #000814;
+    font-weight: 400;
+}
+
+.badge p {
+    padding-top: 4px;
+}
+
+.box:hover .badge {
+    /* transition: all .3s linear; */
+}
+
+.box img {
+    margin-top: .7rem;
+}
+
+.price {
+    margin: .9rem 0 .9rem -6rem;
     color: var(--textColor);
 }
 
-.box p{
-    color: var(--secondaryColor);
-    text-align: center;
+.price::before {
+    display: inline-block;
+    content: '';
+    -webkit-border-radius: 0.375rem;
+    border-radius: 0.375rem;
+    height: 0.65rem;
+    width: 0.65rem;
+    margin-right: 0.5rem;
+    background-color: var(--textColor);
 }
-.title{
-    text-align: center;
-    margin: 1rem 0;
+
+
+.box_button {
+    background-color: var(--primaryColor);
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    border: none;
+    margin: 0rem 0 1rem 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    font-weight: 700;
+
 }
-.dimond-img{
-    margin: 1rem 7rem;
-   border: 1px solid red;
+
+.box_button a {
+    color: #000814;
 }
-.desc{
-    text-align: center;
-    margin: 1rem 0;
+
+.box_button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--secondaryColor);
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+}
+
+.box_button:hover::before {
+    transform: translateX(0);
+    z-index: -1;
+}
+
+.box_button:hover {
+    /* background-color:red; */
+    color: var(--secondaryText);
+}
+
+.box_info {
+    color: var(--textColor);
+    margin-top: 1.5rem;
+}
+
+.box_info p {
+    color: #E8E8E8;
+    opacity: 50%;
+}
+
+/*
+ our package
+*/
+
+.our_packages {
+    background-color: var(--secondaryColor);
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.our_packages::after {
+    content: " ";
+    position: absolute;
+    background: url(../image/banner3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* calculator */
+.calculator {
+    background-color: #252D37;
+    /* overflow: hidden; */
+    padding: 2rem 0;
+    margin: 4rem 0;
+}
+
+.calculator-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;
+}
+
+.calculator-info p {
+    color: var(--textColor);
+}
+
+.calculater-selector {
+    background-color: #6E4E1F;
+    color: var(--textColor);
+    border: none;
+    padding: 21px 123px 23px 41px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    outline: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.amount>input {
+    height: 4rem;
+    width: 18rem;
+    border: none;
+    background-color: #6E4E1F;
+    outline: none;
+    color: var(--textColor);
+    padding-left: 10px;
+    border-radius: 12px;
 }
