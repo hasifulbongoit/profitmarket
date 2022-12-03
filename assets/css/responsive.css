@@ -29,6 +29,12 @@
         line-height: 53px;
         margin-bottom: 30px;
     }
+
+    .cal_ourplan,
+    .cal_amount,
+    .cal_total_profit{
+      width: 48%;
+    }
      
 }
 
@@ -55,6 +61,17 @@
         grid-template-columns: repeat(3, 1fr);
       }
 
+      .cal_ourplan,
+      .cal_amount,
+      .cal_total_profit{
+        width: 30%;
+        margin-bottom: 0px;
+      }
+
+      .lastest_wrapper{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
 }
 
 /* 1024 */
@@ -63,6 +80,18 @@
     .banner_heading {
         font-size: 52px;
         line-height: 72px;
+    }
+
+    .affiliate_wrapper{
+      flex-direction: row;
+    }
+
+    .affiliate_image{
+      width: 33.33%;
+    }
+    
+    .affiliate_content{
+      width: calc(100% - 56%);
     }
 }
 
