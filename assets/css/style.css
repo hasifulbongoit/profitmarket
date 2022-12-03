@@ -27,7 +27,7 @@
 }
 
 .header_nav{
-  display: block;
+  display: none;
 }
 
 .header_nav ul{
@@ -50,39 +50,37 @@
 }
 
 
-.banner_section {
+.banner_section{
   background-color: rgb(0 0 0 / 70%);
-  
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 150px 0px;
   z-index: 1;
   position: relative;
 }
 
-.banner_section::after {
+.banner_section::after{
   content: "";
   position: absolute;
   background: url(../image/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  left: 0px;
+  top: 0px;
   height: 100%;
   width: 100%;
   z-index: -1;
 }
 
-.banner_content{}
+
+/* .banner_content{} */
 
 .banner_heading {
   text-align: center;
-  font-size: 52px;
+  font-size: 28px;
   color: var(--textColor);
   
   font-weight: 800;
-  line-height: 72px;
+  line-height: 36px;
 }
 
 .banner_heading span{
@@ -93,23 +91,24 @@
   text-align: center;
   color: var(--secondaryText);
   margin-top: 20px;
-  font-size: 19px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.banner_btn{
+.banner_btn {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
   gap: 30px;
+  flex-direction: column;
 }
 
 .butoon_inner a {
   display: inline-flex;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 26px;
-  padding: 13px 43px;
+  padding: 8px 35px;
   background-color: var(--primaryColor);
   border-radius: 10px;
   color: var(--primaryBg);
@@ -122,3 +121,177 @@
   background-color: var(--secondaryColor);
   border: 2px solid var(--primaryColor);
 }
+
+/* our plan section */
+
+.ourplan_section{
+  background-color: rgb(0 0 0 / 70%);
+  position: relative;
+  z-index: 1;
+}
+
+.ourplan_section::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-image: url(../image/plan.png);
+  z-index: -1;
+}
+
+/* card slider */
+
+.card_slider{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+}
+
+/* card */
+
+.card {
+  background: rgb(77 54 22 / 60%);
+  padding: 30px;
+  position: relative;
+  border: 2px solid transparent;
+  transition: var(--transition);
+  border-radius: 20px;
+}
+
+.card:hover{
+  border: 2px solid var(--primaryColor);
+  background: var(--secondaryColor);
+  transform: translateY(-10px);
+}
+
+.card_batch {
+  background-color: var(--primaryColor);
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 20px 0 20px 0;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.card:hover .card_batch{
+  opacity: 1;
+  visibility: visible;
+}
+
+.card_batch p{
+  font-size: 12px;
+  color: var(--primaryBg);
+  font-weight: 500;
+  line-height: 16px;
+  
+}
+
+.card_image{
+  width: 80px;
+  margin: 0px auto;
+  margin-bottom: 15px;
+}
+
+.card_image img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card_content{
+  text-align: center;
+}
+
+.card_title{
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.card_offer {
+  color: rgb(232 232 232 / 60%);
+}
+
+.card_price{
+  font-size: 16px;
+  list-style: 24px;
+  margin: 28px 0px;
+  color: #fff;
+  padding-left: 20px;
+  position: relative;
+}
+
+.card_price::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  height: 8px;
+  width: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.card_btn{
+  text-align: center;
+}
+
+.card_btn a {
+  padding: 8px 25px;
+  border-radius: 8px;
+  background-color: var(--primaryColor);
+  color: var(--primaryBg);
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.card_btn a::after{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.card_btn a:hover::after{
+  left: 0px;
+}
+
+/* package section */
+
+.our_package{
+  background-color: rgb(0 0 0 / 70%);
+  position: relative;
+  z-index: 1;
+}
+
+.our_package::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-image: url(../image/package.png);
+  z-index: -1;
+}
+

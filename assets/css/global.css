@@ -25,8 +25,87 @@ p,ul,li,h1,h2,h3,a{
     --primaryBg: #000814;
     --textColor: #FFFFFF;
     --secondaryText: #E8E8E8;
+    --transition: 0.3s all linear;
 }
 
 .section_padding{
     padding: 50px 0px;
 }
+
+.section_title{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.sectiontitle_heading {
+    font-size: 32px;
+    line-height: 42px;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.sectitle_text{
+    font-size: 18px;
+    color: var(--secondaryText);
+    line-height: 26px;
+}
+
+/* toogle nav */
+
+.toggle_nav{
+    height: 17px;
+    width: 30px;
+    position: relative;
+    display: block;
+}
+
+.toggle_nav ul{
+    height: 100%;
+    width: 100%;
+}
+
+.toggle_nav ul li{
+    height: 2px;
+    width: 100%;
+    background-color: var(--primaryColor);
+    position: absolute;
+    transition: var(--transition);
+}
+
+.toggle_nav ul li:first-child{
+    top: 0px;
+    left: 0px;
+}
+
+.toggle_nav ul li:nth-child(2){
+    top: 49%;
+    left: 0px;
+    opacity: 1;
+}
+
+.toggle_nav ul li:last-child{
+    top: 98%;
+    left: 0px;
+}
+
+.toggle_nav:hover li:first-child {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.toggle_nav:hover li:nth-child(2){
+    visibility: hidden;
+    opacity: 0;
+}
+
+.toggle_nav:hover li:last-child{
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+
+
