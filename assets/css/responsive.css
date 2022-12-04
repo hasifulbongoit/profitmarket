@@ -35,6 +35,15 @@
     .cal_total_profit{
       width: 48%;
     }
+
+    .main_footer_wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer_content,
+    .footer_newsletter{
+      grid-column: span 2;
+    }
      
 }
 
@@ -72,6 +81,10 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .benifits_wrapper {
+        flex-direction: row;
+      }
+
 }
 
 /* 1024 */
@@ -92,6 +105,20 @@
     
     .affiliate_content{
       width: calc(100% - 56%);
+    }
+
+    .main_footer_wrapper {
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 28px;
+    }
+
+    .footer_content,
+    .footer_newsletter{
+      grid-column: span 2;
+    }
+
+    .footer_bottom {
+      flex-direction: row;
     }
 }
 
