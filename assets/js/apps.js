@@ -1,3 +1,24 @@
+// toggle btn dashboard
+
+{
+    let dashBtn = document.getElementById("dashboard_toggle")
+    let sideBar = document.getElementById("dashboard_sidebar")
+    
+    dashBtn.addEventListener("click", function(){
+        sideBar.classList.toggle("activeSidebar")
+    })
+
+    let sideBarItem = document.getElementsByClassName("sidebar_nav_item")
+    ;[...sideBarItem].forEach(currentItem => {
+        currentItem.addEventListener("click", function(){
+            ;[...sideBarItem].forEach(innerItem => {
+                innerItem.classList.remove("active")
+            });
+            this.classList.add("active")
+        })
+    });
+}
+
 
 // slick slider
 

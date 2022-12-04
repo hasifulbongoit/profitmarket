@@ -792,8 +792,6 @@ select {
   margin-top: 10px;
 }
 
-.footer_social ul li{}
-
 .footer_social ul li span {
   height: 48px;
   width: 48px;
@@ -804,6 +802,12 @@ select {
   border-radius: 50%;
   color: var(--bs-black);
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.footer_social ul li span:hover{
+  background-color: rgba(255, 159, 28, 0.3);
+  color: var(--textColor);
 }
 
 .footer_title {

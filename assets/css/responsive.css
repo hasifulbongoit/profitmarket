@@ -120,6 +120,26 @@
     .footer_bottom {
       flex-direction: row;
     }
+    .dashboard_toggle{
+      display: none;
+    }
+
+    .dashboard_sidebar{
+      left: 0px;
+    }
+
+    .dashboard_body{
+      margin-left: 265px;
+      width: calc(100% - 265px);
+    }
+
+    .dashboard_header {
+      flex-direction: row;
+  }
+
+    .dashboard_profile{
+      margin-left: auto;
+    }
 }
 
 /* 1200 */
