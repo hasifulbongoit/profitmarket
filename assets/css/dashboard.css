@@ -300,6 +300,10 @@
     color: var(--textColor);
 }
 
+.admin_form{
+    margin-bottom: 40px;
+}
+
 
 
 
