@@ -1,126 +1,3 @@
-:root{
-    --sideBg: #22223B;
-}
-
-.m-b37{
-    margin-bottom: 37px;
-}
-
-.m-b18{
-    margin-bottom: 18px;
-}
-
-.f-18{
-    font-size: 18px;
-    line-height: 28px;
-}
-
-.f-22{
-    font-size: 22px;
-    line-height: 32px;
-}
-
-.f-14{
-    font-size: 14px;
-    line-height: 20px;
-}
-
-f-36{
-    font-size: 36px;
-    line-height: 46px;
-}
-
-f-28{
-    font-size: 28px;
-    line-height: 38px;
-}
-
-.cb-a{
-    background-color: rgb(239 131 84 / 40%);
-}
-
-.cb-b{
-    background-color: rgb(98 182 203 / 40%);
-}
-
-.cb-d{
-    background-color: rgb(253 252 220 / 40%);
-}
-
-.cb-e{
-    background-color: rgb(204 255 51 / 40%);
-}
-
-.cb-f{
-    background-color: rgb(255 159 28 / 40%);
-}
-
-.cb-g{
-    background-color: rgb(128 147 241 / 40%);
-}
-
-.cb-h{
-    background-color: rgb(190 233 232 / 40%);
-}
-.cb-i{
-    background-color: rgb(242 149 89 / 40%);
-}
-.cb-j{
-    background-color: rgb(185 186 163 / 40%);
-}
-.cb-k{
-    background-color: rgb(250 212 192 / 40%);
-}
-.cb-l{
-    background-color: rgb(252 247 255 / 40%);
-}
-.cb-m{
-    background-color: rgb(237 235 160 / 40%);
-}
-
-.c-a{
-    background-color: #EF8354;
-}
-
-.c-b{
-    background-color: #62B6CB;
-}
-
-.c-d{
-    background-color: #FDFCDC;
-}
-
-.c-e{
-    background-color: #CCFF33;
-}
-
-.c-f{
-    background-color: #FF9F1C;
-}
-
-.c-g{
-    background-color: #8093F1;
-}
-
-.c-h{
-    background-color: #BEE9E8;
-}
-.c-i{
-    background-color: #F29559;
-}
-.c-j{
-    background-color: #B9BAA3;
-}
-.c-k{
-    background-color: #FAD4C0;
-}
-.c-l{
-    background-color: #FCF7FF;
-}
-.c-m{
-    background-color: #EDEBA0;
-}
-
 .dashboard{
     position: relative;
 }
@@ -137,7 +14,7 @@ f-28{
 =======================
 */
 
-.dashboard_sidebar{
+.dashboard_sidebar {
     position: fixed;
     top: 0px;
     left: -100%;
@@ -145,6 +22,7 @@ f-28{
     height: 100vh;
     background-color: var(--sideBg);
     transition: var(--transition);
+    z-index: 999;
 }
 
 .dashboard_sidebar.activeSidebar{
@@ -237,6 +115,7 @@ f-28{
     width: 100%;
     transition: var(--transition);
     background-color: var(--primaryBg);
+    min-height: 100vh;
 }
 
 .dashboard_header {
@@ -284,18 +163,143 @@ f-28{
     padding: 20px 25px;
 }
 
-.dashboard_history{}
-
-.dashboard_history_wraper{}
-
-.card_item{
-    border-radius: 16px;
-    padding: 25px;
+.dashboard_history{
+    position: relative;
 }
 
-.card_itame_image{}
+.dashboard_history_wraper{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+}
+
+.admin_deposit_wrapper{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+}
+
+.admin_payment_wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+}
+
+.card_item_divide{
+    grid-column: span 1;
+}
+
+.card_item {
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card_itame_image{
+    position: relative;
+}
 
 .card_itame_image img{
     max-width: 100%;
+    margin: 0px auto;
 }
+
+.card_itame_image img {
+    max-width: 100%;
+    display: block;
+    margin: 0px auto;
+}
+
+.card_item_name{
+    color: var(--textColor);
+}
+
+.card_item_title{
+    margin-bottom: 10px;
+}
+
+.admin_deposit {
+    margin-top: 20px;
+}
+
+.admin_payment_title{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--textColor);
+    margin: 37px 0px;
+}
+
+.card_item_price{
+    font-size: 24px;
+    color: var(--primaryBg);
+    line-height: 30px;
+    font-weight: 700;
+}
+
+/* admin page title */
+
+.admin_page_title{
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+    color: var(--textColor);
+    margin-bottom: 20px;
+}
+
+/* table design */
+
+.admin_table {
+    border-spacing: 0;
+    width: 100%;
+    color: #fff;
+    overflow-x: auto;
+    border-radius: 16px;
+}
+
+.admin_table table {
+    min-width: 768px;
+    overflow-x: auto;
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+.admin_table table th {
+    color: rgb(232 232 232 / 60%);
+}
+
+.admin_table table th:nth-child(1){
+    width: 46%;
+}
+
+.admin_table table th:nth-child(2){
+    width: 27%;
+}
+
+.admin_table table th:nth-child(3){
+    width: 27%;
+}
+
+.admin_table table td, 
+.admin_table table th {
+    padding: 24px;
+    border: 1px solid var(--primaryColor);
+    text-align: left;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    background-color: #22223B;
+}
+
+.admin_table table td{
+    color: var(--textColor);
+}
+
+
+
 

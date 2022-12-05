@@ -44,6 +44,22 @@
     .footer_newsletter{
       grid-column: span 2;
     }
+
+    .dashboard_history_wraper{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+   .admin_deposit_wrapper{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin_payment_wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+   .card_item_divide{
+      grid-column: span 2;
+   }
      
 }
 
@@ -139,6 +155,18 @@
 
     .dashboard_profile{
       margin-left: auto;
+    }
+
+    
+    .dashboard_history_wraper{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+   .admin_deposit_wrapper{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .admin_payment_wrapper {
+      grid-template-columns: repeat(4, 1fr);
     }
 }
 
