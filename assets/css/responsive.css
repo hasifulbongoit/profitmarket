@@ -60,6 +60,11 @@
    .card_item_divide{
       grid-column: span 2;
    }
+
+   .admin_form_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+   }
+
      
 }
 
@@ -99,6 +104,29 @@
 
       .benifits_wrapper {
         flex-direction: row;
+      }
+
+      .admin_form_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+       }
+
+       .edit_acount_wrapper{
+        flex-direction: row;
+       }
+
+       .edit_acount_content{
+        max-width: 450px;
+        width: 100%;
+        height: auto;
+       }
+
+       .widraw_form_inner{
+        flex-direction: row;
+       }
+
+       .widraw_form_inner input,
+      .widraw_form_inner textarea{
+          max-width: 390px;
       }
 
 }
@@ -168,8 +196,17 @@
     .admin_payment_wrapper {
       grid-template-columns: repeat(4, 1fr);
     }
+
+    .refer_image_wrapper{
+      grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* 1200 */
 
-@media(min-width: 1200px){}
+@media(min-width: 1240px){
+  .admin_form_wrapper {
+    grid-template-columns: repeat(4, 1fr);
+   }
+}
+

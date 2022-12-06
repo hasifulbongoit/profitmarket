@@ -60,6 +60,7 @@
 }
 
 .sidebar_nav{
+    position: relative;
 
 }
 
@@ -277,6 +278,10 @@
     width: 46%;
 }
 
+.admin_table_reffer table th:nth-child(1){
+    width: auto;
+}
+
 .admin_table table th:nth-child(2){
     width: 27%;
 }
@@ -298,12 +303,287 @@
 
 .admin_table table td{
     color: var(--textColor);
+    font-weight: 700;
 }
 
 .admin_form{
     margin-bottom: 40px;
 }
 
+.admin_form_wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+}
+
+.admin_form_inner{
+    position: relative;
+    height: 60px;
+}
+
+.admin_form_control {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: var(--primaryBg);
+    background-color: var(--primaryColor);
+    border-radius: 12px;
+}
+
+.admin_form_control option{
+    background-color: #22223B;
+    color: var(--textColor);
+    padding: 5px;
+}
 
 
+.admin_form_icon {
+    position: absolute;
+    color: var(--primaryBg);
+    font-size: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+.c_primary{
+    color: var(--primaryColor) !important;
+}
+
+.table_item_btn a {
+    display: inline-block;
+    padding: 9px 18px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: rgb(255 159 28 / 30%);
+    color: var(--primaryColor);
+    border-radius: 10px;
+}
+
+.make_deposit_heading{
+    position: relative;
+}
+
+.make_deposit_heading p{
+    font-weight: bold;
+    font-size: 19px;
+    color: #adb5bd;
+    margin-bottom: 10px;
+}
+
+.make_deposit_title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.make_deposit_title_text{
+    font-weight: bold;
+    font-size: 19px;
+    text-align: left;
+    color: #fff;
+}
+
+
+.payment_input_user {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.payment_input_user_form{
+    position: relative;
+    height: 60px;
+    max-width: 420px;
+    width: 100%;
+    border: 2px solid var(--primaryColor);
+    border-radius: 12px;
+}
+
+.payment_input_user_balance{
+    height: 100%;
+    width: calc(100% - 100px);
+    outline: none;
+    border: none;
+    color: var(--textColor);
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.payment_input_user_button a {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: bold;
+    color: var(--primaryBg);
+    background: var(--primaryColor);
+    border-radius: 12px;
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    display: grid;
+    place-content: center;
+    top: 0px;
+    right: -3px;
+}
+
+/* edit acount */
+
+
+.edit_acount_title h3 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: var(--textColor);
+    margin-bottom: 30px;
+}
+
+.edit_acount_wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.edit_acount_content{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.edit_input_inner{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.edit_input_wrapper{
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+
+.edit_input_title{
+    display: block;
+    margin-bottom: 10px;
+    color: var(--textColor);
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.edit_input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    color: rgb(232 232 232 / 60%);
+    background-color: rgb(255 159 28 / 20%);
+    border-radius: 10px;
+    padding: 15px 30px;
+    outline: none;
+    font-size: 18px;
+    line-height: 26px;
+    display: block;
+}
+
+.edit_input_icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+}
+
+.edit_acount_btn{
+    text-align: right;
+}
+
+.edit_acount_btn a{
+    display: inline-block;
+    padding: 15px 75px;
+    background-color: var(--primaryColor);
+    color: var(--primaryBg);
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.edit_input option{
+    background-color: var(--primaryBg);
+    color: var(--textColor);
+}
+
+.widraw_form {
+    max-width: 520px;
+    width: 100%;
+    margin-left: auto;
+    margin-top: 100px;
+}
+
+.widraw_form_inner{
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.widraw_form_inner label{
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--primaryColor);
+    font-weight: bold;
+    display: block;
+}
+
+.widraw_form_inner input,
+.widraw_form_inner textarea{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 17px;
+    text-align: center;
+    border: 2px solid var(--primaryColor);
+    outline: none;
+    background-color: transparent;
+    color: var(--textColor);
+    font-weight: bold;
+    line-height: 22px;
+    font-size: 16px;
+    border-radius: 12px;
+    display: block;
+}
+
+.widraw_form_inner textarea{
+    height: 200px;
+}
+
+.refer_image_wrapper{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+}
+
+.refer_single_image{
+    margin-bottom: 40px;
+}
+
+
+.refer_single_image img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
 

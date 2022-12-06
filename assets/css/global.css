@@ -217,6 +217,24 @@ p,ul,li,h1,h2,h3,a{
 .cb-n{
     background-color: #F2FFE8;
 }
+
+.cb_1 {
+    background-color: rgb(205 180 219 / 40%);
+}
+
+.cb_2 {
+    background-color: rgb(162 210 255 / 40%);
+}
+
+.cb_3 {
+    background-color: rgb(229 229 229 / 40%);
+}
+
+.cb_4 {
+    background-color: rgb(232 232 232 / 60%);
+    min-height: 280px;
+}
+
 .c-n{
     color: #F2FFE8;
 }
